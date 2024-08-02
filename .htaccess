@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Exclude favicon from rewrites
+RewriteCond %{REQUEST_URI} !^/favicon.ico$
+RewriteCond %{REQUEST_URI} !^/app/public/favicon.ico$
+RewriteCond %{REQUEST_URI} !^/app/public/
+RewriteRule ^(.*)$ /app/public/$1 [L]
